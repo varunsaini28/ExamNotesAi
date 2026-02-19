@@ -12,11 +12,7 @@ dotenv.config();
 
 const app=express();
 
-app.post(
-  "/api/credits/webhook",
-  express.raw({ type: "application/json" }),
-  stripeWebhook
-);
+
 
 app.use(express.json())
 app.use(cookieParser())
